@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JFood</title>
+    <!-- Google Font Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+   
+    <!-- Style Link -->
+    <link rel="stylesheet" href="../style/style.css">
+
+
+</head>
+<body>
+    <header>
+        <nav id="nav">
+            <div class="logo">
+                <a href="#">JFood</a>
+            </div>
+            <ul>
+                <li><a href="../index.html">Accueil</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>  
+    </header>
+    <main>
+        <div class="site-location">
+            <span onclick="scrollToMap()"><i class="fa-solid fa-location-dot"></i> Ave Rabia Mouhamed, Kouba 15010</span>
+            <a href="tel:021502095"><i class="fa-solid fa-phone"></i> 021 50 20 95</a>
+        </div>
+    
+        <section class="intro">
+            <h1>CONTACTEZ-NOUS</h1>
+            <p>
+                Envoyez-nous un message et nous vous répondrons dans les plus brefs délais. Hâte d'avoir de vos nouvelles.
+            </p>
+        </section>
+
+        <div class="content">
+            <form action="#" method="post">
+                <label for="nom">Nom <span class="input-label-required">- Required</span></label>
+                <input type="text" id="nom" name="nom" placeholder="Nom" maxlength="25" required>
+                <label for="email">Email <span class="input-label-required">- Required</span></label>
+                <input type="text" id="email" name="email" placeholder="Email" maxlength="50" required>
+                <label for="tel">Tel <span class="input-label-required">- Optional</span></label>
+                <input type="tel" id="tel" name="tel" placeholder="Tel" pattern="(05|06|07|0)[0-9]{8}"><!--expression regulaire N°local--> 
+                <label for="emplacement">Emplacement <span class="input-label-required">- Required</span></label>
+                <select name="emplacement" id="emplacement" required>
+                    <option value selected disabled>Emplacement</option>
+                    <option value="alger">Alger</option>
+                    <option value="oran">Oran</option>
+                    <option value="annaba">Annaba</option>
+                </select>
+                <label for="raison">Pour quelle raison contactez-vous ? <span class="input-label-required">- Required</span></label>
+                <select name="raison" id="raison" required>
+                    <option value selected disabled>Pour quelle raison contactez-vous ?</option>
+                    <option value="enquete_generale">enquête générale</option>
+                    <option value="restauration">restauration</option>
+                    <option value="suggestion_menu">suggestion de menu</option>
+                    <option value="probleme_commande">problème de commande</option>
+                </select>
+                <label for="message">Votre Message <span class="input-label-required">- Required</span></label>
+                <textarea id="message" name="message" placeholder="Votre Message" maxlength="150" required></textarea>
+                <input type="submit" value="Envoyer" id="btn" name="submit">
+            </form>
+        </div>
+
+        <div class="geo">
+            <h2>Situation Géographique</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7602.798166711133!2d2.993802006016422!3d36.75658251363872!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x128fb1c234b2ac83%3A0x20edfb1ccea82ee9!2s!5e0!3m2!1sfr!2sdz!4v1712857804996!5m2!1sfr!2sdz" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" id="map"></iframe>
+        </div>
+
+
+       
+    </main>
+
+    
+
+
+
+
+
+
+    <footer>
+        <div class="droit">
+            <p>&COPY; 2024 Le Restaurant JFood.</p>
+        </div>
+        <div class="icons">
+            <a href="https://facebook.com" title="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com" title="instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com" title="x-twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+    </footer>
+    
+
+
+
+
+    <!-- Sripte Link -->
+    <script src="../javascript/contact.js"></script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JFood</title>
+
+    <!-- Google Font Links -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- Style Link -->
+    <link rel="stylesheet" href="style/style.css">
+
+</head>
+<body>
+    <header>
+            <nav id="nav">
+                <div class="logo">
+                    <a href="#">JFood</a>
+                </div>
+                <ul>
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="content/menu.html">Menu</a></li>
+                    <li><a href="content/contact.html">Contact</a></li>
+                </ul>
+            </nav>  
+    </header>
+    <main>
+        <div class="slider-container">
+            <div class="slides">
+                <img src="images/1.jpg" alt="Pizza" class="active" loading="lazy">
+                <img src="images/2.jpg" alt="Cheeseburger" loading="lazy">
+                <img src="images/3.jpg" alt="Hot-Dog" loading="lazy">   
+            </div>
+            <div class="buttons">
+                <span class="next">&#10095;</span>
+                <span class="prev">&#10094;</span>
+            </div>
+
+            <div class="dotContainer">
+                <div class="dot active" data-attr="0" onclick="switchImage(this)"></div>
+                <div class="dot" data-attr="1" onclick="switchImage(this)"></div>
+                <div class="dot" data-attr="2" onclick="switchImage(this)"></div>
+            </div>
+        </div>
+
+        
+        <table class="info">
+            <tr>
+                <td class="cart">
+                    <img src="images/5.jpg" alt="a propos " >
+                    <section>
+                        <h2>À Propos</h2>
+                        <p>
+                            Depuis notre ouverture en 2015,<br>
+                            JFood  fiers de vous offrir une expérience gastronomique inégalée,<br>
+                            dans le monde du fast-food.et de réunir toutes les meilleures saveurs. <br>
+                            Notre menu est une promenade à travers le pays — et le monde!
+                        </p>
+                    </section>
+                </td>
+                <td class="cart">
+                    <img src="images/4.jpg" alt="special">
+                    <section>
+                        <h2>Nos Spéciaux</h2>
+                        <p>
+                            Découvrez chez JFood nos spécialités incontournables : <br>
+                            dégustez nos pizzas croustillantes, nos sandwiches frais <br>
+                            et nos burgers savoureux. 
+                        </p>
+                    </section>
+                </td>
+                <td class="cart">
+                    <img src="images/6.jpg" alt="évènements">
+                    <section>
+                        <h2>Évènements</h2>
+                        <p>Restez informé de nos événements spéciaux,<br>
+                        comme nos soirées à thème et nos offres limitées!</p>
+                    </section>
+                </td>
+            </tr>   
+        </table>
+        
+        
+        
+
+    </main>
+
+    <footer>
+        <div class="droit">
+            <p>&COPY; 2024 Le Restaurant JFood.</p>
+        </div>
+        <div class="icons">
+            <a href="https://facebook.com" title="facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://instagram.com" title="instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://x.com" title="x-twitter"><i class="fa-brands fa-x-twitter"></i></a>
+        </div>
+    </footer>
+
+
+     <!-- Sripte Link -->
+    <script src="javascript/app.js"></script>
+</body>
+</html>

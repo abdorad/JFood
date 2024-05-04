@@ -1,0 +1,531 @@
+body{
+    font-family: "Poppins", sans-serif;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: gold;
+    
+}
+
+
+#nav{
+    background-color: gold;  
+    color: black; 
+    padding:0px 20px;  
+    height: 80px;  
+    position: fixed;  
+    top: 0;  
+    left: 0;
+    right: 0;
+    z-index: 999;  
+    transition: height 0.3s;  
+    display: flex;  
+    justify-content: space-between;  
+    align-items: center; 
+}
+
+#nav.minimized {
+    height: 60px;  
+}
+
+
+
+.logo a{
+    font-size: 40px;
+    font-weight:bold ;
+    padding: 0px 20px;
+}
+
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+
+ul {
+    margin: 0px;
+}
+
+
+ul li{
+    float: left;
+    padding: 0px 15px ;
+    list-style: none;
+}
+
+
+ul li a{
+    padding: 3px 6px;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    transition:all .2s ease-in-out;
+}
+
+
+ul li a:hover{
+    color: gold; 
+} 
+
+nav ul li a::before { 
+    content: ''; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;  
+    height: 28px;  
+    background-color: black;  
+    transition: all 0.2s ease-in-out;  
+    z-index: -1;
+}
+nav ul li a:hover::before {
+    width: 100%; 
+}
+
+main{
+    width: 100%;
+}
+
+
+.slider-container{
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+
+.slider-container .slides{
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slider-container .slides img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+
+.slider-container .slides img:not(.active){
+    top: 0;
+    left: -100%;
+}
+
+span.next, span.prev{
+    position: absolute;
+    top: 50%;
+    transform: translateX(-50%);
+    padding: 14px;
+    color: #eee;
+    font-size: 35px;
+    font-weight: bold;
+    transition: .5s;
+    border-radius: 3px;
+    user-select: none;
+    cursor: pointer;
+    z-index: 1;
+
+}
+span.next{
+    right: 2%;
+}
+span.prev{
+    left: 4%;
+}
+
+
+span.next:hover,span.prev:hover{
+    background-color: gold;
+    opacity: 0.8;
+    color: black;
+}
+
+.dotContainer{
+    position: absolute;
+    bottom: 0;
+    width: 25%;
+    height: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    cursor: pointer;
+    left: 50%;
+    transform: translateX(-50%);
+    border-top-left-radius: 14px;
+    border-top-right-radius: 14px;
+    background-color: gold;
+  
+}
+
+.dotContainer .dot{
+    width: 12px;
+    height: 12px;
+    margin: 0px 15px;
+    border: 3px solid #bbb;
+    border-radius: 50%;
+    transition: all .6s ease-in-out;
+}
+
+.dotContainer .active{
+    background-color: #555;
+}
+
+
+table.info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-collapse: collapse;
+    margin: 40px 10px;
+    width: calc(100% - 40px);
+
+}
+table.info tr td img{
+    width: 86%;
+    height: 100%;
+    border-radius: 10px;
+    
+}
+.cart{
+    text-align: center;
+    vertical-align: middle;
+    padding: 10px;
+}
+table.info tr td h2{
+    font-weight: bold;
+    font-size: 28px;
+}
+table.info tr td p{
+    font-weight: 600;
+    font-size: 16px;
+}
+
+ 
+
+.menu{
+    margin-top: 130px;
+    display: flex ;
+    justify-content: center;
+    width: 100%;
+}
+
+.menu h1{
+    position: relative;
+    font-size: 50px;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.menu h1::before { 
+    content: ''; 
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;  
+    height: 5px;  
+    background-color: black;  
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;  
+    z-index: -1;
+}
+.menu h1:hover::before {
+    width: 100%; 
+}
+
+.menu-btn ul{
+    padding: 20px 60px;
+    display: flex;
+    justify-content: center;
+} 
+
+.menu-btn ul li a{
+    border: 3px solid black;
+    padding: 6px 10px;
+    transition: all .2s ease-in-out;
+}
+.menu-btn ul li a:hover{
+    background-color: black;
+}
+
+
+.menu-section{
+    display:block;
+    text-align: left;
+    position: relative;
+    width:95%;
+    margin: 42px auto 84px auto;
+    padding-top: 40px;
+    border: 3px solid black;
+}
+.menu-section h2{
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+    padding: 5px 30px;
+    border: 3px solid black;
+    position: absolute;
+    top: -34px;
+    left: 12px;
+    z-index: 1;
+    background-color: gold;
+    
+}
+
+.menu-section table{   
+    border-collapse: collapse; 
+    width: 96%;
+    margin: auto;
+}
+
+.menu-section td,tr{
+    padding: 10px;
+}
+
+.menu-section td{
+    font-weight: 500;
+}
+
+.menu-section button{
+    display: block;
+    padding: 8px 8px;
+    width: 72%;
+    margin: auto;
+    font-weight: 600;
+    background-color: gold;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+
+.menu-section button:hover{
+    background-color: black;
+    color: gold;
+}
+
+
+.site-location{
+    align-items: center;
+    margin-top: 130px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+.site-location span{
+    margin-right: 20px;
+    position: relative;
+}
+
+.site-location span::before{
+    content: ''; 
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;  
+    height: 2px;  
+    background-color: black;  
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;  
+    
+}
+
+.site-location span:hover::before{
+    width: 100%;
+}
+
+.site-location a{
+    position: relative;
+    margin-left: 20px;
+}
+
+.site-location a::before{
+    content: ''; 
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0;  
+    height: 2px;  
+    background-color: black;  
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out; 
+}
+
+.site-location a:hover::before{
+    width: 100%;
+}
+
+.intro{
+    width: 50%;
+    text-align: center;
+    margin: 20px auto;
+}
+.intro h1{
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.intro h1::before{
+    content: "";
+    display: block;
+    background-image:url(../images/7.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 95px;
+    height: 95px;
+    margin: 0 auto 2rem;
+    transform: rotate(0);
+    transition: 0.5s ease transform;
+}
+.intro p{
+    font-weight: 500;
+}
+
+.content {  
+    width: 50%;
+    text-align: center;
+    margin: 20px auto;
+}
+
+.content label{
+    display: block;
+    width: 100%;
+    text-align: left;
+    font-weight: 900;
+    font-size: 0.8rem;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.input-label-required{
+    color: #b6b6b6;
+    font-style: italic;
+}
+
+.content input,select ,textarea{
+    display: block;
+    width: 100%;
+    padding: 0.75rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #000;
+    background-color: rgba(255,255,255,0);
+    background-image: none;
+    border: 2px solid #000;
+    border-radius: 0;
+    margin-bottom: 24px;
+}
+.content input{
+    width: 95%;
+}
+.content textarea{
+    height: 100px;
+    width: 95%;
+}
+.content #btn{
+    margin: auto;
+    width: 16%;
+    height: 48px;
+    line-height: 0.5;
+    font-weight: bold;
+    font-size: 0.8rem;
+    border: 2px solid black;
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.content #btn:hover{
+    color: gold;
+    background-color: #000;
+}
+.geo{
+    display:block;
+    margin: 100px 20px 20px 10px;
+}
+.geo h2{
+    margin: 10px 20px 20px 10px; 
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.geo iframe{
+    height: 250px;
+    width: 50%;
+    margin: 10px 20px 20px 10px;
+    
+}
+
+footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: black;
+    color: gold;
+    padding: 0px 30px;
+    height: 20%;
+    font-size: 18px;
+    font-weight: bold; 
+}
+footer p{
+    display: inline-block;
+    margin:12px 0;
+}
+footer .icons{
+    display: flex;
+    justify-content: space-between;
+    width: 80px;
+    cursor: pointer; 
+}
+footer .icons i{
+    color: gold;
+    transition:all .2s ease-in;
+}
+footer .icons i:hover{
+    color: white;
+}
+
+@keyframes next1{
+    from{
+        left: 0%;
+    }
+    to{
+        left: -100%;
+    }
+}
+@keyframes next2{
+    from{
+        left: 100%;
+    }
+    to{
+        left: 0%;
+    }
+}
+@keyframes prev1{
+    from{
+        left: 0%;
+    }
+    to{
+        left: 100%;
+    }
+}
+@keyframes prev2{
+    from{
+        left: -100%;
+    }
+    to{
+        left: 0%;
+    }
+}
+
+
+
+
+
+
+
